@@ -6,7 +6,7 @@ const setupMiddleware = require("./setup-middleware");
 const server = express();
 setupMiddleware(server);
 
-// server.use("/api/users", UserRouter);
+server.use("/api/users", UserRouter);
 
 server.get("/", (req, res) => {
   res.send("Server Running");
